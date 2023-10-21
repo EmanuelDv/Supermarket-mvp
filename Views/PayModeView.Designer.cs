@@ -283,8 +283,11 @@
             // 
             TxtPayModeId.Location = new Point(20, 41);
             TxtPayModeId.Name = "TxtPayModeId";
+            TxtPayModeId.ReadOnly = true;
             TxtPayModeId.Size = new Size(191, 23);
             TxtPayModeId.TabIndex = 0;
+            TxtPayModeId.Text = "0";
+            TxtPayModeId.TextAlign = HorizontalAlignment.Right;
             // 
             // PayModelView
             // 
