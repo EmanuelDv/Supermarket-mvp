@@ -6,7 +6,7 @@
         private bool isSuccessful;
         private string messaje;
 
-        public PayModeView()
+        public PayModelView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
@@ -73,6 +73,23 @@
         public void SetPayModeListBildingSource(BindingSource payModeList)
         {
             DgPayMode.DataSource = payModeList;
+        }
+        private static PayModelView instance;
+        public static PayModelView GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PayModelView();
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
         }
     }
 }
