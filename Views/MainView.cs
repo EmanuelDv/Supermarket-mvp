@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
+            BtnExit.Click += delegate { this.Close(); };
         }
         public event EventHandler ShowPayModeView;
         public event EventHandler ShowProductView;
