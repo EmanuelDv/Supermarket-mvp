@@ -2,10 +2,10 @@
 {
     internal interface IPayModeRepository
     {
-        void Add(PayModelModel payModelModel);
-        void Edit(PayModelModel payModelModel);
+        void Add(PayModeModel payModelModel);
+        void Edit(PayModeModel payModelModel);
         void Delete(int id);
-        IEnumerable<PayModelModel> GetAll();
-        IEnumerable<PayModelModel> GetByValue(string value);
+        IEnumerable<PayModeModel> GetAll();
+        IEnumerable<PayModeModel> GetByValue(string value);
     }
 }

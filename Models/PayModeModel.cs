@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Supermarket_mvp.Models
 {
-    internal class PayModelModel
+    internal class PayModeModel
     {
         [DisplayName("Pay Mode Id")]
         public int Id { get; set; }

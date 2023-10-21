@@ -1,21 +1,23 @@
 ﻿namespace Supermarket_mvp.Views
 {
-    public partial class PayModeView : Form, IPayModeView
+    public partial class PayModelView : Form, IPayModeView
     {
         private bool isEdit;
         private bool isSuccessful;
-        private string message;
+        private string messaje;
 
         public PayModeView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
-            tabControl1.TabPages.Remove(tabPagePayModeList);
+
+            tabControl1.TabPages.Remove(tabPagePayModeDetail);
         }
 
         private void AssociateAndRaiseViewEvents()
         {
             BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+
             TxtSearch.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -23,11 +25,6 @@
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
-        }
-
-        private void TxtSearch_KeyDown(object? sender, KeyEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         public string PayModeId
@@ -42,7 +39,7 @@
         }
         public string PayModeObservation
         {
-            get { return TxtPayModeObservation.Text}
+            get { return TxtPayModeObservation.Text; }
             set { TxtPayModeObservation.Text = value; }
         }
         public string SearchValue
@@ -52,8 +49,8 @@
         }
         public bool IsEdit
         {
-            get { return isEdit}
-            set { isEdit = value}
+            get { return isEdit; }
+            set { isEdit = value; }
         }
         public bool IsSuccessful
         {
@@ -62,12 +59,12 @@
         }
         public string Message
         {
-            get { return message; }
-            set { message = value; }
+            get { return messaje; }
+            set { messaje = value; }
         }
 
         public event EventHandler SearchEvent;
-        public event EventHandler AddnewEvent;
+        public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;

@@ -8,7 +8,7 @@ namespace Supermarket_mvp.Presenters
         private IPayModeView view;
         private IPayModeRepository repository;
         private BindingSource payModeBindingSource;
-        private IEnumerable<PayModelModel> payModeList;
+        private IEnumerable<PayModeModel> payModeList;
 
 
 
@@ -59,7 +59,7 @@ namespace Supermarket_mvp.Presenters
         private void SearchPayMode(object? sender, EventArgs e)
         {
            bool emptyValue=string.IsNullOrWhiteSpace(this.view.SearchValue);
-            if (emptyValue = false)
+            if (emptyValue)
             {
                 payModeList = repository.GetByValue(this.view.SearchValue);
             }

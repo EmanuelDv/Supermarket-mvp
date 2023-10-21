@@ -1,6 +1,6 @@
 ﻿namespace Supermarket_mvp.Views
 {
-    partial class PayModeView
+    partial class PayModelView
     {
         /// <summary>
         /// Required designer variable.
@@ -278,14 +278,14 @@
             TxtPayModeId.Size = new Size(191, 23);
             TxtPayModeId.TabIndex = 0;
             // 
-            // PayModeView
+            // PayModelView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 552);
             Controls.Add(tabControl1);
             Controls.Add(panel1);
-            Name = "PayModeView";
+            Name = "PayModelView";
             Text = "Pay Mode Management";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
