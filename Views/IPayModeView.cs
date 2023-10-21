@@ -5,7 +5,7 @@
         string PayModeId { get; set; }
         string PayModeName { get; set; }
         string PayModeObservation { get; set; }
-        string SearcValue { get; set; }
+        string SearchValue { get; set; }
         bool IsEdit { get; set; }
         string Message { get; set; }
 
@@ -16,7 +16,8 @@
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 
-        void SetPayModeListBildingSource(BindingSource payModeList);
+        void SetPayModeListBildingSource(BindingSource payModeList)
+       
         void Show();
 
 
