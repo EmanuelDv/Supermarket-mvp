@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Supermarket_mvp.Views
+﻿namespace Supermarket_mvp.Views
 {
     public partial class ProductView : Form, IProductView
     {
@@ -36,9 +26,11 @@ namespace Supermarket_mvp.Views
             };
             BtnNewProd.Click += delegate
             {
+
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
-                tabControl1.TabPages.Remove(tabPageProductsDetail);
-                tabPageProductsDetail.Text = "Add New Products";
+                tabControl1.TabPages.Remove(tabPageProductsList);
+                tabControl1.TabPages.Add(tabPageProductsDetail);
+                tabPageProductsDetail.Text = "Add New Product";
 
             };
 
@@ -49,10 +41,10 @@ namespace Supermarket_mvp.Views
                 tabControl1.TabPages.Add(tabPageProductsDetail);
                 tabPageProductsDetail.Text = "Edit Product";
             };
-            BtnDelete.Click += delegate
+            BtnDeleteProd.Click += delegate
             {
                 var result = MessageBox.Show(
-                "Are you sure you want to delete the selected Pay Mode",
+                "Are you sure you want to delete the selected Product",
                 "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
@@ -125,7 +117,7 @@ namespace Supermarket_mvp.Views
             get { return message; }
             set { message = value; }
         }
-        
+
 
         public ProductView(string searchValue)
         {

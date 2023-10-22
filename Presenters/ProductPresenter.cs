@@ -86,9 +86,9 @@ namespace Supermarket_mvp.Presenters
         {
             view.ProductsId = "0";
             view.ProductsName = "";
-            view.ProductsPrice = "0";
-            view.ProductsStock = "0";
-            view.Category_Id = "0";
+            view.ProductsPrice = "";
+            view.ProductsStock = "";
+            view.Category_Id = "";//movi aqui 
         }
 
 
