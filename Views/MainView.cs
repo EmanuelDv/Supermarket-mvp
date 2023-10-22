@@ -8,6 +8,7 @@
             BtnPayMode.Click += delegate { ShowPayModeView?.Invoke(this, EventArgs.Empty); };
             BtnCategory.Click += delegate { ShowCategoryView?.Invoke(this, EventArgs.Empty); };
             BtnProviders.Click += delegate { ShowProvidersView?.Invoke(this, EventArgs.Empty); };
+            BtnProducts.Click += delegate { ShowProductView?.Invoke(this, EventArgs.Empty); };
             BtnExit.Click += delegate { this.Close(); };
         }
         public event EventHandler ShowPayModeView;
