@@ -38,17 +38,9 @@
             BtnEditProv = new Button();
             BtnNewProv = new Button();
             BtnSearchProv = new Button();
-            BtnCloseProd = new Button();
-            BtnDeleteProd = new Button();
+            
             DgProviders = new DataGridView();
-            BtnEditProd = new Button();
-            BtnNewProd = new Button();
-            BtnSearchProd = new Button();
-            BtnClose = new Button();
-            BtnDelete = new Button();
-            BtnEdit = new Button();
-            BtnNew = new Button();
-            BtnSearch = new Button();
+           
             TxtSearchProv = new TextBox();
             Lbl1 = new Label();
             tabPageProvidersDetail = new TabPage();
@@ -131,7 +123,7 @@
             tabPageProvidersList.Controls.Add(Lbl1);
             tabPageProvidersList.Location = new Point(4, 24);
             tabPageProvidersList.Name = "tabPageProvidersList";
-            tabPageProvidersList.Padding = new Padding(3, 3, 3, 3);
+            tabPageProvidersList.Padding = new Padding(3);
             tabPageProvidersList.Size = new Size(987, 425);
             tabPageProvidersList.TabIndex = 0;
             tabPageProvidersList.Text = "Providers List";
@@ -189,23 +181,11 @@
             // 
             // BtnCloseProd
             // 
-            BtnCloseProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnCloseProd.Image = Properties.Resources.cerrar;
-            BtnCloseProd.Location = new Point(1566, 348);
-            BtnCloseProd.Name = "BtnCloseProd";
-            BtnCloseProd.Size = new Size(196, 62);
-            BtnCloseProd.TabIndex = 12;
-            BtnCloseProd.UseVisualStyleBackColor = true;
+           
             // 
             // BtnDeleteProd
             // 
-            BtnDeleteProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDeleteProd.Image = Properties.Resources.delete;
-            BtnDeleteProd.Location = new Point(1566, 269);
-            BtnDeleteProd.Name = "BtnDeleteProd";
-            BtnDeleteProd.Size = new Size(196, 62);
-            BtnDeleteProd.TabIndex = 11;
-            BtnDeleteProd.UseVisualStyleBackColor = true;
+            
             // 
             // DgProviders
             // 
@@ -224,84 +204,27 @@
             // 
             // BtnEditProd
             // 
-            BtnEditProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEditProd.Image = Properties.Resources.edit;
-            BtnEditProd.Location = new Point(1566, 189);
-            BtnEditProd.Name = "BtnEditProd";
-            BtnEditProd.Size = new Size(196, 62);
-            BtnEditProd.TabIndex = 10;
-            BtnEditProd.UseVisualStyleBackColor = true;
+          
             // 
             // BtnNewProd
             // 
-            BtnNewProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNewProd.Image = Properties.Resources._new;
-            BtnNewProd.Location = new Point(1566, 102);
-            BtnNewProd.Name = "BtnNewProd";
-            BtnNewProd.Size = new Size(196, 62);
-            BtnNewProd.TabIndex = 9;
-            BtnNewProd.UseVisualStyleBackColor = true;
+            
             // 
             // BtnSearchProd
             // 
-            BtnSearchProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearchProd.Image = Properties.Resources.search_small;
-            BtnSearchProd.Location = new Point(1306, 34);
-            BtnSearchProd.Name = "BtnSearchProd";
-            BtnSearchProd.Size = new Size(48, 43);
-            BtnSearchProd.TabIndex = 8;
-            BtnSearchProd.UseVisualStyleBackColor = true;
+            
             // 
             // BtnClose
             // 
-            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(2180, 352);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(196, 62);
-            BtnClose.TabIndex = 7;
-            BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(2180, 274);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(196, 62);
-            BtnDelete.TabIndex = 6;
-            BtnDelete.UseVisualStyleBackColor = true;
+           
+            
             // 
             // BtnEdit
             // 
-            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(2180, 188);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(196, 62);
-            BtnEdit.TabIndex = 5;
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnNew
-            // 
-            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(2180, 100);
-            BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(196, 62);
-            BtnNew.TabIndex = 4;
-            BtnNew.UseVisualStyleBackColor = true;
+            
             // 
             // BtnSearch
-            // 
-            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearch.Image = Properties.Resources.search_small;
-            BtnSearch.Location = new Point(2125, 37);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(48, 43);
-            BtnSearch.TabIndex = 2;
-            BtnSearch.UseVisualStyleBackColor = true;
-            // 
+     
             // TxtSearchProv
             // 
             TxtSearchProv.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -332,12 +255,11 @@
             tabPageProvidersDetail.Controls.Add(TxtProvidersId);
             tabPageProvidersDetail.Location = new Point(4, 24);
             tabPageProvidersDetail.Name = "tabPageProvidersDetail";
-            tabPageProvidersDetail.Padding = new Padding(3, 3, 3, 3);
+            tabPageProvidersDetail.Padding = new Padding(3);
             tabPageProvidersDetail.Size = new Size(987, 425);
             tabPageProvidersDetail.TabIndex = 1;
             tabPageProvidersDetail.Text = "Providers Detail";
             tabPageProvidersDetail.UseVisualStyleBackColor = true;
-            tabPageProvidersDetail.Click += tabPageProvidersDetail_Click;
             // 
             // lblprice
             // 
@@ -353,7 +275,7 @@
             TxtObservationProv.Location = new Point(20, 156);
             TxtObservationProv.Multiline = true;
             TxtObservationProv.Name = "TxtObservationProv";
-            TxtObservationProv.PlaceholderText = "Direction";
+            TxtObservationProv.PlaceholderText = "Observacion";
             TxtObservationProv.Size = new Size(362, 78);
             TxtObservationProv.TabIndex = 8;
             // 

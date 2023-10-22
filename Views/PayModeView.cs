@@ -4,7 +4,7 @@
     {
         private bool isEdit;
         private bool isSuccessful;
-        private string messaje;
+        private string message;
 
         public PayModelView()
         {
@@ -105,8 +105,8 @@
         }
         public string Message
         {
-            get { return messaje; }
-            set { messaje = value; }
+            get { return message; }
+            set { message = value; }
         }
 
         public event EventHandler SearchEvent;
