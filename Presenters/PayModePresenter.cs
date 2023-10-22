@@ -35,12 +35,6 @@ namespace Supermarket_mvp.Presenters
             payModeList = repository.GetAll();
             payModeBindingSource.DataSource = payModeList;
         }
-
-        private void CancelAction(object? sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         private void SavePayMode(object? sender, EventArgs e)
         {
             var payMode = new PayModeModel();

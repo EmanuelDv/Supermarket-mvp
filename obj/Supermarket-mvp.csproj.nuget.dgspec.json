@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emanuel\\source\\repos\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
+    "C:\\Users\\jhoan\\source\\repos\\EmanuelDv\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emanuel\\source\\repos\\Supermarket-mvp\\Supermarket-mvp.csproj": {
+    "C:\\Users\\jhoan\\source\\repos\\EmanuelDv\\Supermarket-mvp\\Supermarket-mvp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emanuel\\source\\repos\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectUniqueName": "C:\\Users\\jhoan\\source\\repos\\EmanuelDv\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "projectName": "Supermarket-mvp",
-        "projectPath": "C:\\Users\\emanuel\\source\\repos\\Supermarket-mvp\\Supermarket-mvp.csproj",
-        "packagesPath": "C:\\Users\\emanuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emanuel\\source\\repos\\Supermarket-mvp\\obj\\",
+        "projectPath": "C:\\Users\\jhoan\\source\\repos\\EmanuelDv\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "packagesPath": "C:\\Users\\jhoan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jhoan\\Source\\Repos\\EmanuelDv\\Supermarket-mvp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emanuel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jhoan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
