@@ -15,24 +15,72 @@ namespace Supermarket_mvp.Views
         private bool isEdit;
         private bool isSuccessful;
         private string message;
-        
+
 
         public CategoryView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
             tabControl1.TabPages.Remove(tabPageCategoryDetail);
+
+            BtnCloseCat.Click += delegate { this.Close(); };
+
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSearch2.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
             TxtSearchCat.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
+            };
+
+            BtnNewCat.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageCategoryList);
+                tabControl1.TabPages.Add(tabPageCategoryDetail);
+                tabPageCategoryDetail.Text = "Add New Category";
+
+            };
+
+            BtnEditCat.Click += delegate
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageCategoryList);
+                tabControl1.TabPages.Add(tabPageCategoryDetail);
+                tabPageCategoryDetail.Text = "Edit Category";
+            };
+            BtnDeleteCat.Click += delegate
+            {
+                var result = MessageBox.Show(
+                "Are you sure you want to delete the selected Pay Mode",
+                "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
+                }
+
+            };
+            BtnSaveCat.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    tabControl1.TabPages.Remove(tabPageCategoryDetail);
+                    tabControl1.TabPages.Add(tabPageCategoryList);
+                }
+                MessageBox.Show(Message);
+            };
+            BtnCancelCat.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tabPageCategoryDetail);
+                tabControl1.TabPages.Add(tabPageCategoryList);
             };
         }
 
@@ -71,7 +119,7 @@ namespace Supermarket_mvp.Views
             get { return message; }
             set { message = value; }
         }
-    
+
 
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
@@ -83,6 +131,37 @@ namespace Supermarket_mvp.Views
         public void SetCategoryListBildingSource(BindingSource categoryList)
         {
             DgCategory.DataSource = categoryList;
+        }
+        private static CategoryView instance;
+        public static CategoryView GetInstance(Form parentContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new CategoryView();
+                instance.MdiParent = parentContainer;
+
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
+
+        private void tabPageCategoryList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSearch2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

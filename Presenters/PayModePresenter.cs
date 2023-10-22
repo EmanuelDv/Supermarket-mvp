@@ -10,8 +10,6 @@ namespace Supermarket_mvp.Presenters
         private BindingSource payModeBindingSource;
         private IEnumerable<PayModeModel> payModeList;
 
-
-
         public PayModePresenter(IPayModeView view, IPayModeRepository repository)
         {
             this.payModeBindingSource = new BindingSource();
@@ -72,7 +70,7 @@ namespace Supermarket_mvp.Presenters
             view.PayModeName = "";
             view.PayModeObservation = "";
         }
-        private void CancelAction(object? sender,EventArgs e)
+        private void CancelAction(object? sender, EventArgs e)
         {
             CleanViewFields();
         }
@@ -87,7 +85,7 @@ namespace Supermarket_mvp.Presenters
                 view.Message = "Pay Mode deleted succesfuly";
                 LoadAllPayModeList();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 view.IsSuccessful = false;
                 view.Message = "A error ocurred, could not delete paymode";
@@ -107,7 +105,7 @@ namespace Supermarket_mvp.Presenters
         private void SearchPayMode(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
-            if (emptyValue)
+            if (emptyValue == false)
             {
                 payModeList = repository.GetByValue(this.view.SearchValue);
             }

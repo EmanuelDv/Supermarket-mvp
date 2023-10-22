@@ -33,21 +33,12 @@
             lblcategories = new Label();
             tabControl1 = new TabControl();
             tabPageCategoryList = new TabPage();
+            BtnSearch2 = new Button();
             BtnCloseCat = new Button();
             BtnDeleteCat = new Button();
             BtnEditCat = new Button();
             BtnNewCat = new Button();
-            BtnCloseProd = new Button();
-            BtnDeleteProd = new Button();
             DgCategory = new DataGridView();
-            BtnEditProd = new Button();
-            BtnNewProd = new Button();
-            BtnSearchProd = new Button();
-            BtnClose = new Button();
-            BtnDelete = new Button();
-            BtnEdit = new Button();
-            BtnNew = new Button();
-            BtnSearch = new Button();
             TxtSearchCat = new TextBox();
             Lbl1 = new Label();
             tabPageCategoryDetail = new TabPage();
@@ -110,21 +101,12 @@
             // 
             // tabPageCategoryList
             // 
+            tabPageCategoryList.Controls.Add(BtnSearch2);
             tabPageCategoryList.Controls.Add(BtnCloseCat);
             tabPageCategoryList.Controls.Add(BtnDeleteCat);
             tabPageCategoryList.Controls.Add(BtnEditCat);
             tabPageCategoryList.Controls.Add(BtnNewCat);
-            tabPageCategoryList.Controls.Add(BtnCloseProd);
-            tabPageCategoryList.Controls.Add(BtnDeleteProd);
             tabPageCategoryList.Controls.Add(DgCategory);
-            tabPageCategoryList.Controls.Add(BtnEditProd);
-            tabPageCategoryList.Controls.Add(BtnNewProd);
-            tabPageCategoryList.Controls.Add(BtnSearchProd);
-            tabPageCategoryList.Controls.Add(BtnClose);
-            tabPageCategoryList.Controls.Add(BtnDelete);
-            tabPageCategoryList.Controls.Add(BtnEdit);
-            tabPageCategoryList.Controls.Add(BtnNew);
-            tabPageCategoryList.Controls.Add(BtnSearch);
             tabPageCategoryList.Controls.Add(TxtSearchCat);
             tabPageCategoryList.Controls.Add(Lbl1);
             tabPageCategoryList.Location = new Point(4, 24);
@@ -134,6 +116,18 @@
             tabPageCategoryList.TabIndex = 0;
             tabPageCategoryList.Text = "Category List";
             tabPageCategoryList.UseVisualStyleBackColor = true;
+            tabPageCategoryList.Click += tabPageCategoryList_Click;
+            // 
+            // BtnSearch2
+            // 
+            BtnSearch2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            BtnSearch2.Image = Properties.Resources.search_small;
+            BtnSearch2.Location = new Point(419, 45);
+            BtnSearch2.Name = "BtnSearch2";
+            BtnSearch2.Size = new Size(53, 43);
+            BtnSearch2.TabIndex = 17;
+            BtnSearch2.UseVisualStyleBackColor = true;
+            BtnSearch2.Click += BtnSearch2_Click;
             // 
             // BtnCloseCat
             // 
@@ -175,26 +169,6 @@
             BtnNewCat.TabIndex = 13;
             BtnNewCat.UseVisualStyleBackColor = true;
             // 
-            // BtnCloseProd
-            // 
-            BtnCloseProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnCloseProd.Image = Properties.Resources.cerrar;
-            BtnCloseProd.Location = new Point(1441, 348);
-            BtnCloseProd.Name = "BtnCloseProd";
-            BtnCloseProd.Size = new Size(196, 62);
-            BtnCloseProd.TabIndex = 12;
-            BtnCloseProd.UseVisualStyleBackColor = true;
-            // 
-            // BtnDeleteProd
-            // 
-            BtnDeleteProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDeleteProd.Image = Properties.Resources.delete;
-            BtnDeleteProd.Location = new Point(1441, 269);
-            BtnDeleteProd.Name = "BtnDeleteProd";
-            BtnDeleteProd.Size = new Size(196, 62);
-            BtnDeleteProd.TabIndex = 11;
-            BtnDeleteProd.UseVisualStyleBackColor = true;
-            // 
             // DgCategory
             // 
             DgCategory.AllowUserToAddRows = false;
@@ -209,86 +183,6 @@
             DgCategory.RowTemplate.Height = 25;
             DgCategory.Size = new Size(570, 327);
             DgCategory.TabIndex = 3;
-            // 
-            // BtnEditProd
-            // 
-            BtnEditProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEditProd.Image = Properties.Resources.edit;
-            BtnEditProd.Location = new Point(1441, 189);
-            BtnEditProd.Name = "BtnEditProd";
-            BtnEditProd.Size = new Size(196, 62);
-            BtnEditProd.TabIndex = 10;
-            BtnEditProd.UseVisualStyleBackColor = true;
-            // 
-            // BtnNewProd
-            // 
-            BtnNewProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNewProd.Image = Properties.Resources._new;
-            BtnNewProd.Location = new Point(1441, 102);
-            BtnNewProd.Name = "BtnNewProd";
-            BtnNewProd.Size = new Size(196, 62);
-            BtnNewProd.TabIndex = 9;
-            BtnNewProd.UseVisualStyleBackColor = true;
-            // 
-            // BtnSearchProd
-            // 
-            BtnSearchProd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearchProd.Image = Properties.Resources.search_small;
-            BtnSearchProd.Location = new Point(1180, 34);
-            BtnSearchProd.Name = "BtnSearchProd";
-            BtnSearchProd.Size = new Size(48, 43);
-            BtnSearchProd.TabIndex = 8;
-            BtnSearchProd.UseVisualStyleBackColor = true;
-            // 
-            // BtnClose
-            // 
-            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(2054, 352);
-            BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(196, 62);
-            BtnClose.TabIndex = 7;
-            BtnClose.UseVisualStyleBackColor = true;
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(2054, 274);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(196, 62);
-            BtnDelete.TabIndex = 6;
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(2054, 188);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(196, 62);
-            BtnEdit.TabIndex = 5;
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnNew
-            // 
-            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(2054, 100);
-            BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(196, 62);
-            BtnNew.TabIndex = 4;
-            BtnNew.UseVisualStyleBackColor = true;
-            // 
-            // BtnSearch
-            // 
-            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnSearch.Image = Properties.Resources.search_small;
-            BtnSearch.Location = new Point(2000, 37);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(48, 43);
-            BtnSearch.TabIndex = 2;
-            BtnSearch.UseVisualStyleBackColor = true;
             // 
             // TxtSearchCat
             // 
@@ -427,17 +321,11 @@
         private Label lblcategories;
         private TabControl tabControl1;
         private TabPage tabPageCategoryList;
-        private Button BtnCloseProd;
-        private Button BtnDeleteProd;
+
         private DataGridView DgCategory;
-        private Button BtnEditProd;
-        private Button BtnNewProd;
-        private Button BtnSearchProd;
-        private Button BtnClose;
-        private Button BtnDelete;
-        private Button BtnEdit;
-        private Button BtnNew;
-        private Button BtnSearch;
+
+
+
         private TextBox TxtSearchCat;
         private Label Lbl1;
         private TabPage tabPageCategoryDetail;
@@ -453,5 +341,6 @@
         private Button BtnDeleteCat;
         private Button BtnEditCat;
         private Button BtnNewCat;
+        private Button BtnSearch2;
     }
 }
