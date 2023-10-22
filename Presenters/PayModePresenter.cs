@@ -58,6 +58,7 @@ namespace Supermarket_mvp.Presenters
                 view.IsSuccessful = true;
                 LoadAllPayModeList();
                 CleanViewFields();
+
             }
             catch (Exception ex)
             {

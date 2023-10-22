@@ -17,6 +17,7 @@ namespace Supermarket_mvp._Repositories
             using (var command = new SqlCommand())
             {
                 connection.Open();
+                command.Connection = connection;
                 command.CommandText = "INSERT INTO PayMode VALUES (@name,@observation)";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModelModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = payModelModel.Observation;
@@ -47,7 +48,7 @@ namespace Supermarket_mvp._Repositories
                 command.CommandText = @"UPDATE PayMode
                                         SET Pay_Mode_Name = @name,
                                         Pay_Mode_Observation =@observation 
-                                        WHERE Pay_Mode_Id =@id";
+                                        WHERE Pay_Mode_Id = @id";
                 command.Parameters.Add("@name", SqlDbType.NVarChar).Value = payModelModel.Name;
                 command.Parameters.Add("@observation", SqlDbType.NVarChar).Value = payModelModel.Observation;
                 command.Parameters.Add("@id", SqlDbType.Int).Value = payModelModel.Id;
